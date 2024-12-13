@@ -1,13 +1,17 @@
+/* Importação da fonte Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Estilo do formulário */
 #form-name {
   background-color: #ffffff;
-  padding: 20px;
+  padding: 24px;
   border-radius: 8px;
   width: 100%;
-  max-width: 500px;
+  max-width: 100%;
   margin: 0 auto;
-  font-family: Arial, sans-serif;
-  border: 1px solid #cccccc;
+  font-family: 'Montserrat', sans-serif;
 }
+
 #form-name input,
 #form-name select,
 #form-name button {
@@ -19,12 +23,15 @@
   background-color: #fbfbfb;
   color: #000000;
   font-size: 16px;
+  font-family: 'Montserrat', sans-serif; /* Fonte aplicada aos elementos */
 }
+
 #form-name input:focus,
 #form-name select:focus {
   border-color: #00d030;
   outline: none;
 }
+
 #form-name button {
   background-color: #00d030;
   color: #000000;
@@ -32,7 +39,9 @@
   border: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: 'Montserrat', sans-serif; /* Fonte aplicada ao botão */
 }
+
 #form-name button:hover {
   background-color: #00b028;
 }
