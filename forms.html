@@ -1,39 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formulário</title>
+
   <!-- Link para o CSS -->
-  <link rel="stylesheet" href="https://bernardo-agroadvance.github.io/forms/forms.css">
+  <link rel="stylesheet"
+    href="C:\Users\Agro215\OneDrive - Agroadvance Treinamento e Experimentacao Agronomica LTDA\Área de Trabalho\Forms\forms.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
 </head>
+
 <body>
   <form id="form-name" onsubmit="handleSubmit(event)">
-    <label for="nome">Nome Completo</label>
+
+    <!-- Campos Ocultos -->
+    <input type="hidden" name="conversion_identifier" value="data-science-vendas-formulario">
+    <input type="hidden" name="url_conversion" value="">
+    <input type="hidden" name="utm_source" value="">
+    <input type="hidden" name="utm_medium" value="">
+    <input type="hidden" name="utm_campaign" value="">
+    <input type="hidden" name="utm_content" value="">
+    <input type="hidden" name="utm_term" value="">
+
+
+    <!-- Campos Visiveis -->
+    <label for="nome">Nome Completo *</label>
     <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
-    
-    <label for="email">E-mail</label>
+
+    <label for="email">E-mail *</label>
     <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
-    
-    <label for="telefone">WhatsApp</label>
-    <input type="tel" id="telefone" name="telefone" placeholder="Digite seu número de WhatsApp" required>
-    
-    <label for="cargo">Cargo</label>
+
+
+    <label for="telefone">Telefone *</label>
+    <input type="tel" id="phone" name="phone" placeholder="Digite seu telefone" required>
+
+    <label>Possui superior completo? *</label>
+    <div class="button-education" id="education-group">
+      <button type="button" id="sim">Sim</button>
+      <button type="button" id="nao">Não</button>
+      <input type="hidden" id="education" name="education" required>
+    </div>
+
+    <label for="cargo">Cargo *</label>
     <select id="cargo" name="cargo" required>
-      <option value="">Selecione seu cargo</option>
+      <option value="" disabled selected>Selecione seu cargo</option>
       <option value="gerente">Gerente</option>
       <option value="analista">Analista</option>
       <option value="coordenador">Coordenador</option>
       <option value="outro">Outro</option>
     </select>
-    
-    <label for="superior">Possui superior completo?</label>
-    <select id="superior" name="superior" required>
-      <option value="sim">Sim</option>
-      <option value="nao">Não</option>
-    </select>
 
-    <button type="submit" id="submit-form-button-name">Garanta sua vaga</button>
+    <label for="outro-cargo" id="label-outro-cargo" style="display: none;">Outro Cargo *</label>
+    <input type="text" id="outro-cargo" name="outro-cargo" placeholder="Informe seu cargo" style="display: none;"
+      required>
+
+    <div class="terms-container">
+      <label>
+        <input type="checkbox" id="accept-terms" name="accept-terms" required>
+        <span>Li e aceito os <a href="URL_TERMOS" target="_blank">termos de uso</a> e a <a href="URL_PRIVACIDADE"
+            target="_blank">política de privacidade</a>.</span>
+      </label>
+    </div>
+
+    <button type="submit" id="submit-form">Garanta sua vaga</button>
   </form>
+
+  <!-- Vinculando o JavaScript -->
+  <script
+    src="C:\Users\Agro215\OneDrive - Agroadvance Treinamento e Experimentacao Agronomica LTDA\Área de Trabalho\Forms\forms.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.min.js"></script>
+
 </body>
+
 </html>
