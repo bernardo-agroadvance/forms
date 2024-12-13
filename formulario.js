@@ -24,18 +24,12 @@
         <option value="sim">Sim</option>
         <option value="nao">Não</option>
       </select>
-      
-      <!-- Campos ocultos para dados avançados -->
-      <input type="hidden" name="utm_source" id="utm_source" class="hidden-field">
-      <input type="hidden" name="utm_medium" id="utm_medium" class="hidden-field">
-      <input type="hidden" name="utm_campaign" id="utm_campaign" class="hidden-field">
-      <input type="hidden" name="ip_address" id="ip_address" class="hidden-field">
     
       <button type="submit" id="submit-form-123">Garanta sua vaga</button>
     </form>
   `;
 
-  // Adicionar o formulário dinamicamente no elemento alvo
+  // Adicionar o formulário ao contêiner
   const targetElement = document.querySelector('#form-container');
   if (targetElement) {
     targetElement.innerHTML = formHtml;
@@ -56,7 +50,7 @@
       event.preventDefault();
       const form = document.getElementById("form-produto-123");
       const formData = new FormData(form);
-      const webhookUrl = "SUA_URL_DO_WEBHOOK";
+      const webhookUrl = "SUA_URL_DO_WEBHOOK"; // Substitua pela URL do webhook
 
       fetch(webhookUrl, {
         method: "POST",
@@ -64,10 +58,17 @@
       })
       .then(response => {
         if (response.ok) {
-          window.location.href = "URL_DE_OBRIGADO";
+          window.location.href = "URL_DE_OBRIGADO"; // Substitua pela URL de obrigado
         } else {
           alert("Erro ao enviar o formulário. Tente novamente.");
         }
       })
       .catch(error => {
-        console.error
+        console.error("Erro:", error);
+        alert("Erro ao enviar o formulário. Tente novamente.");
+      });
+    };
+  } else {
+    console.error("O elemento #form-container não foi encontrado.");
+  }
+})();
