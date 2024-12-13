@@ -1,0 +1,38 @@
+#form-name {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  border: 1px solid #cccccc;
+}
+#form-name input,
+#form-name select,
+#form-name button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background-color: #fbfbfb;
+  color: #000000;
+  font-size: 16px;
+}
+#form-name input:focus,
+#form-name select:focus {
+  border-color: #00d030;
+  outline: none;
+}
+#form-name button {
+  background-color: #00d030;
+  color: #000000;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#form-name button:hover {
+  background-color: #00b028;
+}
