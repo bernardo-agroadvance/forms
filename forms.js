@@ -1,6 +1,6 @@
 (function() {
   const formHtml = `
-    <form id="form-produto-123" onsubmit="handleSubmit(event)">
+    <form id="form-name" onsubmit="handleSubmit(event)">
       <label for="nome">Nome Completo</label>
       <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
       <label for="email">E-mail</label>
