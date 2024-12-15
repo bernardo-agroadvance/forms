@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   captureUserLocation()
 });
 
- // Captura IP
+ // Captura IP (ipinfo)
 function captureUserLocation() {
   fetch("https://ipinfo.io/json?token=e880a2e44e4604")
     .then((response) => response.json())
