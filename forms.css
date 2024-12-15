@@ -7,13 +7,38 @@
 
 /* Estilo principal do formulário */
 #form-name {
-  background-color: #ffffff; /* Fundo branco */
-  padding: 24px; /* Espaçamento interno */
-  border-radius: 4px; /* Bordas arredondadas */
-  width: auto; /* Largura automática */
-  max-width: 100%; /* Largura máxima de 100% */
-  margin: 0; /* Remove margens externas */
-  font-family: 'Montserrat', sans-serif; /* Define a fonte padrão */
+  background-color: #ffffff;
+  /* Fundo branco */
+  padding: 24px;
+  /* Espaçamento interno */
+  border-radius: 4px;
+  /* Bordas arredondadas */
+  width: auto;
+  /* Largura automática */
+  max-width: 100%;
+  /* Largura máxima de 100% */
+  margin: 0;
+  /* Remove margens externas */
+  font-family: 'Montserrat', sans-serif;
+  /* Define a fonte padrão */
+}
+
+/* Estilo geral para mensagens de erro */
+.errorMessage {
+  color: #ff0000 !important;
+  /* Cor vermelha para destacar o erro */
+  font-size: 12px !important;
+  /* Tamanho menor para ser discreto */
+  font-weight: 400;
+  /* Peso da fonte leve */
+  margin-top: -16px !important;
+  /* Pequeno espaçamento acima */
+  margin-bottom: 16px !important;
+  /* Sem margem inferior */
+  display: block;
+  /* Exibe como bloco para alinhar com o campo */
+  position: relative;
+  /* Mantém o alinhamento com o campo */
 }
 
 /* ============================ */
@@ -22,49 +47,80 @@
 
 /* Placeholder dos campos de texto */
 #form-name input::placeholder {
-  color: #6c757d; /* Cor do placeholder */
-  opacity: 1; /* Garante que o placeholder não seja transparente */
+  color: #6c757d;
+  /* Cor do placeholder */
+  opacity: 1;
+  /* Garante que o placeholder não seja transparente */
 }
 
 /* Estilo geral para campos de texto, seletor e botão */
 #form-name input,
 #form-name select,
 #form-name button {
-  width: 100%; /* Ocupa toda a largura disponível */
-  padding: 16px; /* Espaçamento interno */
-  margin-bottom: 24px; /* Espaçamento inferior */
-  border: 1px solid #cccccc; /* Borda cinza */
-  border-radius: 4px; /* Bordas arredondadas */
-  background-color: #fbfbfb; /* Fundo claro */
-  color: #000000; /* Texto preto */
-  font-size: 1rem; /* Tamanho da fonte */
-  font-family: 'Montserrat', sans-serif; /* Fonte Montserrat */
-  box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+  width: 100%;
+  /* Ocupa toda a largura disponível */
+  padding: 16px;
+  /* Espaçamento interno */
+  margin-bottom: 24px;
+  /* Espaçamento inferior */
+  border: 1px solid #cccccc;
+  /* Borda cinza */
+  border-radius: 4px;
+  /* Bordas arredondadas */
+  background-color: #fbfbfb;
+  /* Fundo claro */
+  color: #000000;
+  /* Texto preto */
+  font-size: 1rem;
+  /* Tamanho da fonte */
+  font-family: 'Montserrat', sans-serif;
+  /* Fonte Montserrat */
+  box-sizing: border-box;
+  /* Inclui padding e borda no tamanho total */
 }
 
 /* Estilo para o campo ativo (focado) */
 #form-name input:focus,
 #form-name select:focus {
-  border-color: #00d030; /* Cor da borda quando focada */
-  outline: none; /* Remove o contorno padrão */
+  border-color: #00d030;
+  /* Cor da borda quando focada */
+  outline: none;
+  /* Remove o contorno padrão */
 }
+
+/* Estilo para campos inválidos */
+.invalid {
+  border: 1px solid #ff0000 !important; /* Borda vermelha */
+  background-color: #fff0f0; /* Fundo levemente avermelhado */
+}
+
 
 /* Estilo do botão */
 #form-name button {
-  background-color: #00d030; /* Fundo verde */
-  color: #000000; /* Texto preto */
-  font-weight: bold; /* Texto em negrito */
-  border: none; /* Remove borda */
-  cursor: pointer; /* Muda o cursor ao passar o mouse */
-  transition: background-color 0.3s ease; /* Transição suave para hover */
-  padding: 16px; /* Espaçamento interno */
-  font-size: 1rem; /* Tamanho da fonte */
-  margin-top: 24px; /* Espaçamento superior */
+  background-color: #00d030;
+  /* Fundo verde */
+  color: #000000;
+  /* Texto preto */
+  font-weight: bold;
+  /* Texto em negrito */
+  border: none;
+  /* Remove borda */
+  cursor: pointer;
+  /* Muda o cursor ao passar o mouse */
+  transition: background-color 0.3s ease;
+  /* Transição suave para hover */
+  padding: 16px;
+  /* Espaçamento interno */
+  font-size: 1rem;
+  /* Tamanho da fonte */
+  margin-top: 24px;
+  /* Espaçamento superior */
 }
 
 /* Estilo para o botão ao passar o mouse */
 #form-name button:hover {
-  background-color: #00b028; /* Cor mais escura ao passar o mouse */
+  background-color: #00b028;
+  /* Cor mais escura ao passar o mouse */
 }
 
 /* ============================ */
@@ -73,12 +129,18 @@
 
 /* Estilo para os labels */
 #form-name label {
-  font-family: 'Montserrat', sans-serif; /* Fonte Montserrat */
-  font-weight: 500; /* Peso médio */
-  font-size: 0.8rem; /* Tamanho da fonte menor */
-  color: #000000; /* Texto preto */
-  margin-bottom: 8px; /* Espaçamento inferior */
-  display: block; /* Exibição em bloco */
+  font-family: 'Montserrat', sans-serif;
+  /* Fonte Montserrat */
+  font-weight: 500;
+  /* Peso médio */
+  font-size: 0.8rem;
+  /* Tamanho da fonte menor */
+  color: #000000;
+  /* Texto preto */
+  margin-bottom: 8px;
+  /* Espaçamento inferior */
+  display: block;
+  /* Exibição em bloco */
 }
 
 /* ================================ */
@@ -87,8 +149,10 @@
 
 /* Contêiner principal do seletor intl-tel-input */
 .iti {
-  width: 100%; /* Ocupa toda a largura disponível */
-  margin-bottom: 24px; /* Espaçamento inferior */
+  width: 100%;
+  /* Ocupa toda a largura disponível */
+  margin-bottom: 24px;
+  /* Espaçamento inferior */
 }
 
 
@@ -96,49 +160,74 @@
 /*      Botões de Educação      */
 /* ============================ */
 
+
 /* Contêiner dos botões */
 .button-education {
-  display: flex; /* Alinha os botões em linha */
-  gap: 16px; /* Espaçamento entre os botões */
+  display: flex;
+  /* Alinha os botões em linha */
+  gap: 16px;
+  /* Espaçamento entre os botões */
 }
 
 /* Estilo para os botões */
 .button-education button {
-  background-color: #fbfbfb !important; /* Fundo claro */
-  border: 1px solid #cccccc !important; /* Borda cinza */
-  margin-top: 0 !important; /* Remove margem superior */
-  border-radius: 4px; /* Bordas arredondadas */
-  padding: 8px 16px; /* Espaçamento interno */
-  cursor: pointer; /* Cursor interativo */
-  font-family: 'Montserrat', sans-serif; /* Fonte Montserrat */
-  font-size: 1rem; /* Tamanho da fonte */
-  transition: background-color 0.3s; /* Transição suave */
+  background-color: #fbfbfb !important;
+  /* Fundo claro */
+  border: 1px solid #cccccc !important;
+  /* Borda cinza */
+  margin-top: 0 !important;
+  /* Remove margem superior */
+  border-radius: 4px;
+  /* Bordas arredondadas */
+  padding: 8px 16px;
+  /* Espaçamento interno */
+  cursor: pointer;
+  /* Cursor interativo */
+  font-family: 'Montserrat', sans-serif;
+  /* Fonte Montserrat */
+  font-size: 1rem;
+  /* Tamanho da fonte */
+  transition: background-color 0.3s;
+  /* Transição suave */
+}
+
+.button-education button:hover {
+  background-color: #00d030 !important;
+  border: none !important;
 }
 
 /* Botão selecionado */
 .button-education button.selected {
-  background-color: #00d030 !important; /* Fundo verde */
-  border: 0 !important; /* Remove borda */
-  color: #ffffff; /* Texto branco */
+  background-color: #00d030 !important;
+  /* Fundo verde */
+  border: none !important;
+  /* Remove borda */
+  color: #ffffff;
+  /* Texto branco */
+  font-weight: bold;
+  /* Texto em negrito */
 }
 
 /* ============================ */
-/*    Selecionar Cargo (Select) */
+/*    Selecionar Position (Select) */
 /* ============================ */
 
 /* Cor do texto inicial no seletor */
-#cargo {
-  color: #6c757d; /* Cinza inicial */
+#position {
+  color: #6c757d;
+  /* Cinza inicial */
 }
 
 /* Cor das opções não selecionadas */
-#cargo option:not(:checked) {
-  color: #000; /* Preto */
+#position option:not(:checked) {
+  color: #000;
+  /* Preto */
 }
 
 /* Cor do placeholder enquanto não selecionado */
-#cargo:invalid {
-  color: #6c757d; /* Cinza */
+#position:invalid {
+  color: #6c757d;
+  /* Cinza */
 }
 
 /* ============================ */
@@ -147,37 +236,48 @@
 
 /* Contêiner do checkbox de termos */
 .terms-container label {
-  display: inline-flex !important; /* Exibição flexível */
-  align-items: center; /* Alinha checkbox e texto */
-  gap: 8px; /* Espaço entre checkbox e texto */
-  line-height: 1.5; /* Espaçamento confortável entre linhas */
-  width: 100%; /* Usa toda a largura do contêiner */
-}
-
-/* Remove margens padrão do checkbox */
-.terms-container input[type="checkbox"] {
-  margin: 0;
+  display: inline-flex !important;
+  /* Alinha checkbox e texto lado a lado */
+  align-items: flex-start;
+  /* Alinha verticalmente o texto ao topo do checkbox */
+  gap: 12px;
+  /* Espaçamento entre o checkbox e o texto */
+  line-height: 1.5;
+  /* Espaçamento confortável entre linhas */
+  width: 100%;
+  /* Usa toda a largura do contêiner */
+  cursor: pointer;
+  /* Muda o cursor ao passar o mouse */
+  font-size: 0.9rem;
+  /* Tamanho levemente menor do texto */
+  color: #000000;
+  /* Texto preto */
 }
 
 /* Links dentro do label */
 .terms-container label a {
-  white-space: normal; /* Permite quebra de linha no texto */
-  word-wrap: break-word; /* Quebra palavras longas */
-}
-
-/* Estilo geral para links */
-.terms-container a {
-  text-decoration: underline; /* Sublinhar links */
-  color: #007bff; /* Azul */
+  white-space: normal;
+  /* Permite quebra de linha no texto */
+  word-wrap: break-word;
+  /* Quebra palavras longas */
+  text-decoration: underline;
+  /* Sublinhar links */
+  color: #007bff;
+  /* Azul */
+  font-weight: 500;
+  /* Destaca os links */
 }
 
 /* Cor mais escura para links ao passar o mouse */
-.terms-container a:hover {
+.terms-container label a:hover {
   color: #0056b3;
+  /* Azul mais escuro */
 }
 
-/* Checkbox dos termos */
+/* Checkbox independente */
 #accept-terms {
-  width: auto !important; /* Define largura automática */
-  margin-bottom: 0 !important; /* Remove margem inferior */
+  width: auto !important;
+  /* Garante largura automática */
+  margin-right: 8px;
+  /* Remove margens extras */
 }
